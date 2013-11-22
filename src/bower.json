@@ -1,0 +1,22 @@
+{
+  "name": "kibana",
+  "version": "3.0.0-m1",
+  "homepage": "https://github.com/tmaiaroto/kibana",
+  "authors": [
+    "Tom Maiaroto <tom@shift8creative.com>"
+  ],
+  "main": "app/app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "latest",
+    "bootstrap": "latest"
+  }
+}

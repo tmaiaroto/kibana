@@ -1,0 +1,12 @@
+.container, body {
+	background: #222;
+}
+
+.container-fluid {
+	padding: 0 15px;
+}
+
+.top-row-close, .top-row-open {
+	background: #222;
+	color: #C8C8C8;
+}

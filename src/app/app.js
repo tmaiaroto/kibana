@@ -9,7 +9,7 @@ define([
   'elasticjs',
   'bootstrap',
   'angular-sanitize',
-  'angular-strap',
+  //'angular-strap',
   'angular-dragdrop',
   'extend-jquery'
 ],
@@ -81,7 +81,7 @@ function (angular, $, _, appLevelRequire) {
 
   var apps_deps = [
     'elasticjs.service',
-    '$strap.directives',
+    //'$strap.directives',
     'ngSanitize',
     'ngDragDrop',
     'kibana'

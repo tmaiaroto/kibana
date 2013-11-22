@@ -16,14 +16,18 @@ require.config({
     chromath:                 '../vendor/chromath',
     angular:                  '../vendor/angular/angular',
     'angular-dragdrop':       '../vendor/angular/angular-dragdrop',
-    'angular-strap':          '../vendor/angular/angular-strap',
+    //'angular-strap':          '../vendor/angular/angular-strap',
     'angular-sanitize':       '../vendor/angular/angular-sanitize',
     timepicker:               '../vendor/angular/timepicker',
     datepicker:               '../vendor/angular/datepicker',
 
     underscore:               'components/underscore.extended',
     'underscore-src':         '../vendor/underscore',
-    bootstrap:                '../vendor/bootstrap/bootstrap',
+    //bootstrap:                '../vendor/bootstrap/bootstrap',
+
+    // NEW
+    'bootstrap':              '../bower_components/bootstrap/dist/js/bootstrap',
+    'bootstrap-ui':           '../bower_components/angular-bootstrap/ui-bootstrap',
 
     jquery:                   '../vendor/jquery/jquery-1.8.0',
     'jquery-ui':              '../vendor/jquery/jquery-ui-1.10.3',
@@ -85,7 +89,7 @@ require.config({
     'angular-route':        ['angular'],
     'angular-touch':        ['angular'],
 
-    'angular-strap':        ['angular', 'bootstrap','timepicker', 'datepicker'],
+    //'angular-strap':        ['angular', 'bootstrap','timepicker', 'datepicker'],
 
     timepicker:             ['jquery', 'bootstrap'],
     datepicker:             ['jquery', 'bootstrap'],
