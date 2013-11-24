@@ -7,17 +7,15 @@ function (angular) {
   angular
     .module('kibana.directives')
     .directive('kibanaPanel', function($compile) {
-      var container = '<div class="panelCont"></div>';
+      var container = '<div class="panel panel-default panel-kibana"></div>';
 
       var editorTemplate =
-
-        '<div class="row-fluid panel-extra"><div class="panel-extra-container">' +
-
+        '<div class="panel-heading panel-extra"><div class="panel-extra-container">' +
 
           '<span class="extra row-button" ng-show="panel.editable != false">' +
             '<span confirm-click="row.panels = _.without(row.panels,panel)" '+
             'confirmation="Are you sure you want to remove this {{panel.type}} panel?" class="pointer">'+
-            '<i class="icon-remove pointer" bs-tooltip="\'Remove\'"></i></span>'+
+            '<i class="fa fa-times pointer" bs-tooltip="\'Remove\'"></i></span>'+
           '</span>' +
 
           '<span class="extra row-button" ng-hide="panel.draggable == false">' +
@@ -30,7 +28,7 @@ function (angular) {
               'index:{{$index}},'+
               'onStart:\'panelMoveStart\','+
               'onStop:\'panelMoveStop\''+
-              '}"  ng-model="row.panels"><i class="icon-move"></i></span>'+
+              '}"  ng-model="row.panels"><i class="fa fa-arrows"></i></span>'+
           '</span>' +
           '<span class="extra row-button" ng-show="panel.draggable == false">' +
             '<span class="row-text">{{panel.type}}</span>'+
@@ -38,7 +36,7 @@ function (angular) {
 
           '<span class="row-button extra" ng-show="panel.editable != false">' +
             '<span bs-modal="\'app/partials/paneleditor.html\'" class="pointer">'+
-            '<i class="icon-cog pointer" bs-tooltip="\'Configure\'"></i></span>'+
+            '<i class="fa fa-cog pointer" bs-tooltip="\'Configure\'"></i></span>'+
           '</span>' +
 
           '<span ng-repeat="task in panelMeta.modals" class="row-button extra" ng-show="task.show">' +
@@ -57,16 +55,23 @@ function (angular) {
           '</span>'+
 
         '</div></div>';
+
       return {
-        restrict: 'E',
+      	restrict: 'E',
+       // replace: true,
+      //  transclude: true,
+        template: editorTemplate,
         link: function($scope, elem, attr) {
           // once we have the template, scan it for controllers and
           // load the module.js if we have any
 
-          // compile the module and uncloack. We're done
+          elem.addClass('panel-default');
+          // compile the module and uncloak. We're done
           function loadModule($module) {
             $module.appendTo(elem);
             elem.wrap(container);
+			
+
             /* jshint indent:false */
             $compile(elem.contents())($scope);
             elem.removeClass("ng-cloak");
@@ -87,7 +92,9 @@ function (angular) {
               $controllers = $controllers.add($module.find('ngcontroller, [ng-controller], .ng-controller'));
 
               if ($controllers.length) {
-                $controllers.first().prepend(editorTemplate);
+              // 	$controllers.first().prepend(editorTemplate);
+              	$controllers.addClass('panel-body');
+                
                 $scope.require([
                   'panels/'+nameAsPath+'/module'
                 ], function() {

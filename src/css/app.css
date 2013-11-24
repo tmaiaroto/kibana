@@ -1,12 +1,97 @@
 .container, body {
-	background: #222;
+	background-color: #272B30;
+	color: #C8C8C8;
 }
 
 .container-fluid {
 	padding: 0 15px;
-}
-
-.top-row-close, .top-row-open {
-	background: #222;
 	color: #C8C8C8;
 }
+
+
+.app-container {
+	padding: 30px;
+}
+
+/* Rows */
+.row-kibana {}
+
+.row-content {}
+
+.row-control {
+	position: relative;
+	left: -20px;
+	height: 5px;
+	text-align: center;
+}
+.row-button, .row-open, .row-close {
+	font-size:13px;
+	font-weight:200;
+}
+.row-open span, .row-close span {
+	width: 14px;
+	height: 14px;
+	margin: 0 0 5px 0;
+	display: block;
+	text-align: center;
+}
+.row-close .row-button {
+	display: block;
+	float: left;
+	margin: 0 5px 5px 0;
+}
+
+
+/* Row Control Buttons/Icons */
+.row-control i {
+	color: #777;
+}
+.row-control i {
+	width: 14px;
+	height: 14px;
+}
+.pointer {
+	cursor: pointer;
+}
+.pointer i:hover, i.pointer:hover, .row-open span i:hover, .row-open span:hover, .row-close span i:hover, .row-close span:hover {
+	color:#fff;
+}
+
+/* Panels */
+.panel-kibana {
+	margin-right: 10px;
+}
+
+.panel-extra {
+	font-size: .9em;
+	margin-bottom: 10px;
+}
+.panel-extra-container {
+	margin-right: -11px;
+}
+
+.panel-extra-container .row-button {
+	padding: 2px 7px 0 7px;
+	/*
+	border-left: 1px solid #3e444c;
+	border-right: 1px solid #101214;
+	*/
+}
+.panel-extra-container .extra {
+	/* border-bottom: 1px solid #32383e; */
+	float: right!important;
+}
+.panel-extra-container .row-text {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 90%;
+}
+
+.panel-extra-container .panel-title {
+	border-right: 0;
+	border-left: 0;
+	padding: 10px 0 0 0;
+}
+
+/* Modal */
+.modal-kibana {}

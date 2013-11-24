@@ -9,9 +9,10 @@ define([
   'elasticjs',
   'bootstrap',
   'angular-sanitize',
-  //'angular-strap',
+  'angular-strap',
   'angular-dragdrop',
-  'extend-jquery'
+  'extend-jquery',
+  'ui-bootstrap'
 ],
 function (angular, $, _, appLevelRequire) {
   "use strict";
@@ -81,10 +82,11 @@ function (angular, $, _, appLevelRequire) {
 
   var apps_deps = [
     'elasticjs.service',
-    //'$strap.directives',
+    '$strap.directives',
     'ngSanitize',
     'ngDragDrop',
-    'kibana'
+    'kibana',
+    'ui.bootstrap'
   ];
 
   _.each('controllers directives factories services filters'.split(' '),

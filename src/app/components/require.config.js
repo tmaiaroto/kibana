@@ -23,11 +23,10 @@ require.config({
 
     underscore:               'components/underscore.extended',
     'underscore-src':         '../vendor/underscore',
-    //bootstrap:                '../vendor/bootstrap/bootstrap',
-
-    // NEW
-    'bootstrap':              '../bower_components/bootstrap/dist/js/bootstrap',
-    'bootstrap-ui':           '../bower_components/angular-bootstrap/ui-bootstrap',
+    bootstrap:                '../vendor/bootstrap/bootstrap',
+    //'bootstrap':              '../bower_components/bootstrap/js/bootstrap',
+    'angular-strap':          '../bower_components/angular-strap/dist/angular-strap',
+    'ui-bootstrap':           '../bower_components/angular-bootstrap/ui-bootstrap.min',
 
     jquery:                   '../vendor/jquery/jquery-1.8.0',
     'jquery-ui':              '../vendor/jquery/jquery-ui-1.10.3',
@@ -89,11 +88,12 @@ require.config({
     'angular-route':        ['angular'],
     'angular-touch':        ['angular'],
 
-    //'angular-strap':        ['angular', 'bootstrap','timepicker', 'datepicker'],
+    'angular-strap':        ['angular', 'bootstrap','timepicker', 'datepicker'],
+    'ui-bootstrap':          ['angular'],
 
     timepicker:             ['jquery', 'bootstrap'],
     datepicker:             ['jquery', 'bootstrap'],
-
+    
     elasticjs:              ['angular', '../vendor/elasticjs/elastic']
   },
   waitSeconds: 60,
